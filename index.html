@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="countBox">
+        <h1>1~10 랜덤 뽑기</h1>
+        <p class="countNumber1">0</p>
+        <p class="countNumber2">0</p>
+        <p class="countNumber3">0</p>
+        <p class="countNumber4">0</p>
+        <p class="countNumber5">0</p>
+        <p class="countNumber6">0</p>
+        <div class="countButtonWrap">
+            <button class="generate">뽑기</button>
+        </div>
+    </div>
+
+
+    <script>
+        let generateNum1 = document.querySelector(".countNumber1");
+        let generateNum2 = document.querySelector(".countNumber2");
+        let generateNum3 = document.querySelector(".countNumber3");
+        let generateNum4 = document.querySelector(".countNumber4");
+        let generateNum5 = document.querySelector(".countNumber5");
+        let generateNum6 = document.querySelector(".countNumber6");
+        let button = document.querySelector(".generate");
+
+        function generator() {
+            const randomNum1 = Math.floor(Math.random() * 10 + 1);
+            const randomNum2 = Math.floor(Math.random() * 10 + 1);
+            const randomNum3 = Math.floor(Math.random() * 10 + 1);
+            const randomNum4 = Math.floor(Math.random() * 10 + 1);
+            const randomNum5 = Math.floor(Math.random() * 10 + 1);
+            const randomNum6 = Math.floor(Math.random() * 10 + 1);
+            //Math.random 0~1 사이의 난수 생성
+            //Math.floor 소수점을 내림시켜 정수로 만듦
+            generateNum1.innerHTML = randomNum1;
+            generateNum2.innerHTML = randomNum2;
+            generateNum3.innerHTML = randomNum3;
+            generateNum4.innerHTML = randomNum4;
+            generateNum5.innerHTML = randomNum5;
+            generateNum6.innerHTML = randomNum6;
+        }
+
+        button.addEventListener("click", generator);</script>
+</body>
+
+</html>
